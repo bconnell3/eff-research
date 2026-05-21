@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edmonton Folk Music Festival — Artist Research</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.10/babel.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: #070809; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    fetch("./App.jsx")
+      .then(r => r.text())
+      .then(src => {
+        // Babel transforms JSX and converts ES module syntax to CommonJS
+        const { code } = Babel.transform(src, {
+          presets: [
+            ["react", { runtime: "classic" }],
+            ["env",   { modules: "commonjs" }],
+          ],
+        });
+
+        // Provide a minimal module environment so import/export works
+        const mod = { exports: {} };
+        const fakeRequire = name => {
+          if (name === "react") return React;
+          throw new Error("Unexpected import: " + name);
+        };
+
+        // Execute the transformed code with React in scope
+        // eslint-disable-next-line no-new-func
+        new Function("require", "module", "exports", "React", code)(
+          fakeRequire, mod, mod.exports, React
+        );
+
+        const App = mod.exports.default ?? mod.exports;
+        ReactDOM.createRoot(document.getElementById("root")).render(
+          React.createElement(App)
+        );
+      })
+      .catch(err => {
+        document.getElementById("root").innerHTML =
+          `<pre style="color:#f87171;padding:20px;font-family:monospace">Failed to load App.jsx:\n${err}</pre>`;
+      });
+  </script>
+</body>
+</html>
