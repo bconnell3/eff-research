@@ -557,7 +557,7 @@ export default function App() {
 
       {/* Disclaimer */}
       <div style={{ background: "#090a0c", borderBottom: "1px solid #404040", padding: "6px 22px" }}>
-        <div style={{ maxWidth: 820, margin: "0 auto", fontSize: 15, color: "#1a2430" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto", fontSize: 15, color: "#8898b0" }}>
           ⚠ "Likely Available" = no conflicting dates found in public listings. Agents must confirm actual availability.
         </div>
       </div>
@@ -629,7 +629,7 @@ export default function App() {
         })}
       </div>
 
-      <div style={{ borderTop: "1px solid #0e1318", padding: "10px 22px", textAlign: "center", fontSize: 15, color: "#151e28" }}>
+      <div style={{ borderTop: "1px solid #0e1318", padding: "10px 22px", textAlign: "center", fontSize: 15, color: "#8898b0" }}>
         Researched via Ticketmaster · Songkick · JamBase · Live Nation · Music Festival Wizard · May 2026 · Edmonton Folk Fest Aug 6–9, 2026
       </div>
     </div>
