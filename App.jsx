@@ -2,10 +2,10 @@ import { useState, useMemo } from "react";
 
 // ─── STATUS CONFIG ────────────────────────────────────────────────────────────
 const S = {
-  available: { label: "Likely Available", color: "#4ade80", dot: "#22c55e", bg: "#020d05", border: "#0a2e12" },
-  unknown:   { label: "No Dates Listed",  color: "#94a3b8", dot: "#64748b", bg: "#07090c", border: "#12182a" },
-  partial:   { label: "Partial / Logistics", color: "#fb923c", dot: "#f97316", bg: "#0c0602", border: "#2e1200" },
-  conflict:  { label: "Conflict / N/A",   color: "#f87171", dot: "#ef4444", bg: "#0c0202", border: "#2e0808" },
+  available: { label: "Likely Available", color: "#4ade80", dot: "#22c55e", bg: "#020d05", border: "#404040" },
+  unknown:   { label: "No Dates Listed",  color: "#94a3b8", dot: "#64748b", bg: "#07090c", border: "#404040" },
+  partial:   { label: "Partial / Logistics", color: "#fb923c", dot: "#f97316", bg: "#0c0602", border: "#404040" },
+  conflict:  { label: "Conflict / N/A",   color: "#f87171", dot: "#ef4444", bg: "#0c0202", border: "#404040" },
 };
 
 // ─── TIERS (shown in order) ───────────────────────────────────────────────────
@@ -511,12 +511,12 @@ export default function App() {
     <div style={{ fontFamily: "'Georgia', serif", background: "#070809", minHeight: "100vh", color: "#d8dde4" }}>
 
       {/* Header */}
-      <div style={{ background: "linear-gradient(160deg,#0d1114 0%,#070809 100%)", borderBottom: "1px solid #13181e", padding: "24px 22px 18px" }}>
+      <div style={{ background: "linear-gradient(160deg,#0d1114 0%,#070809 100%)", borderBottom: "1px solid #404040", padding: "24px 22px 18px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
-          <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: "#eaeff5", letterSpacing: "-0.2px" }}>
+          <h1 style={{ margin: 0, fontSize: 24, fontWeight: 700, color: "#eaeff5", letterSpacing: "-0.2px" }}>
             Edmonton Folk Music Festival — Artist Research
           </h1>
-          <p style={{ margin: "4px 0 14px", fontSize: 12, color: "#2a3848", fontStyle: "italic" }}>
+          <p style={{ margin: "4px 0 14px", fontSize: 16, color: "#A3A3A3", fontStyle: "italic" }}>
             Aug 6–9, 2026 · {ALL.length} artists checked · Tour data as of May 2026
           </p>
 
@@ -529,7 +529,7 @@ export default function App() {
               { key: "partial",  color: "#fb923c", label: `~ Partial (${counts.partial})` },
               { key: "conflict", color: "#f87171", label: `✗ Conflict (${counts.conflict})` },
             ].map(p => (
-              <span key={p.key} style={{ fontSize: 11.5, background: "#0d1114", border: `1px solid ${p.color}22`, borderRadius: 4, padding: "3px 9px", color: p.color }}>
+              <span key={p.key} style={{ fontSize: 15, background: "#0d1114", border: `1px solid ${p.color}22`, borderRadius: 4, padding: "3px 9px", color: p.color }}>
                 {p.label}
               </span>
             ))}
@@ -541,23 +541,23 @@ export default function App() {
               {CATS.map(c => (
                 <button key={c} onClick={() => setCat(c)} style={{
                   background: cat === c ? "#131c28" : "transparent",
-                  border: `1px solid ${cat === c ? "#2a3a58" : "#131c28"}`,
-                  color: cat === c ? "#7a9ac8" : "#2a3848",
-                  borderRadius: 4, padding: "4px 10px", fontSize: 11,
+                  border: `1px solid ${cat === c ? "#A3A3A3" : "#404040"}`,
+                  color: cat === c ? "#7a9ac8" : "#A3A3A3",
+                  borderRadius: 4, padding: "4px 10px", fontSize: 15,
                   cursor: "pointer", fontFamily: "Georgia, serif",
                 }}>{c}</button>
               ))}
             </div>
             <input value={search} onChange={e => setSearch(e.target.value)}
               placeholder="Search…"
-              style={{ background: "#0d1114", border: "1px solid #131c28", color: "#8898b0", borderRadius: 4, padding: "4px 10px", fontSize: 11.5, width: 120, fontFamily: "Georgia, serif", outline: "none" }} />
+              style={{ background: "#0d1114", border: "1px solid #131c28", color: "#8898b0", borderRadius: 4, padding: "4px 10px", fontSize: 15, width: 120, fontFamily: "Georgia, serif", outline: "none" }} />
           </div>
         </div>
       </div>
 
       {/* Disclaimer */}
-      <div style={{ background: "#090a0c", borderBottom: "1px solid #0e1318", padding: "6px 22px" }}>
-        <div style={{ maxWidth: 820, margin: "0 auto", fontSize: 11, color: "#1a2430" }}>
+      <div style={{ background: "#090a0c", borderBottom: "1px solid #404040", padding: "6px 22px" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto", fontSize: 15, color: "#1a2430" }}>
           ⚠ "Likely Available" = no conflicting dates found in public listings. Agents must confirm actual availability.
         </div>
       </div>
@@ -577,23 +577,23 @@ export default function App() {
                 background: "none", border: "none", cursor: "pointer", width: "100%", textAlign: "left",
                 padding: "8px 0 6px", display: "flex", alignItems: "center", gap: 10,
               }}>
-                <span style={{ fontSize: 13, fontWeight: 700, color: tierColor }}>{tier.label}</span>
-                <span style={{ fontSize: 11, color: "#2a3848", fontStyle: "italic" }}>{tier.desc}</span>
-                <span style={{ marginLeft: "auto", fontSize: 11, color: "#2a3848" }}>
+                <span style={{ fontSize: 18, fontWeight: 700, color: tierColor }}>{tier.label}</span>
+                <span style={{ fontSize: 15, color: "#A3A3A3", fontStyle: "italic" }}>{tier.desc}</span>
+                <span style={{ marginLeft: "auto", fontSize: 15, color: "#A3A3A3" }}>
                   {artists.length} artist{artists.length !== 1 ? "s" : ""} {expanded ? "▲" : "▼"}
                 </span>
               </button>
               <div style={{ height: 1, background: `${tierColor}22`, marginBottom: 7 }} />
 
               {expanded && (
-                <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {artists.map((a, i) => {
                     const st = S[a.tier === "top" ? "available" : a.tier];
                     const isTopTier = a.tier === "top";
                     return (
                       <div key={a.name} style={{
                         background: isTopTier ? "#0a1008" : "#090a0c",
-                        border: `1px solid ${isTopTier ? "#1a3018" : "#0f1318"}`,
+                        border: `1px solid ${isTopTier ? "#1a3018" : "#404040"}`,
                         borderLeft: `3px solid ${isTopTier ? "#f0c040" : st.dot}`,
                         borderRadius: 6,
                         padding: "10px 14px",
@@ -604,12 +604,12 @@ export default function App() {
                         {/* Left */}
                         <div>
                           <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2, flexWrap: "wrap" }}>
-                            {isTopTier && <span style={{ fontSize: 10, color: "#f0c040" }}>★</span>}
-                            <span style={{ fontWeight: 700, fontSize: 13.5, color: "#dce8f0" }}>{a.name}</span>
+                            {isTopTier && <span style={{ fontSize: 14, color: "#f0c040" }}>★</span>}
+                            <span style={{ fontWeight: 700, fontSize: 16, color: "#dce8f0" }}>{a.name}</span>
                           </div>
-                          <div style={{ fontSize: 10.5, color: "#2a3848", marginBottom: 5 }}>{a.genre}</div>
+                          <div style={{ fontSize: 15, color: "#A3A3A3", marginBottom: 5 }}>{a.genre}</div>
                           {a.lastBefore !== "—" && a.lastBefore && (
-                            <div style={{ fontSize: 10.5, color: "#1e3040", lineHeight: 1.6 }}>
+                            <div style={{ fontSize: 15, color: "#d4d4d4", lineHeight: 1.6 }}>
                               <div>← {a.lastBefore}</div>
                               {a.firstAfter && <div>→ {a.firstAfter}</div>}
                             </div>
@@ -617,7 +617,7 @@ export default function App() {
                         </div>
                         {/* Right */}
                         <div>
-                          <p style={{ margin: 0, fontSize: 12.5, color: "#5a7080", lineHeight: 1.55 }}>{a.notes}</p>
+                          <p style={{ margin: 0, fontSize: 16, color: "#d4d4d4", lineHeight: 1.55 }}>{a.notes}</p>
                         </div>
                       </div>
                     );
@@ -629,7 +629,7 @@ export default function App() {
         })}
       </div>
 
-      <div style={{ borderTop: "1px solid #0e1318", padding: "10px 22px", textAlign: "center", fontSize: 10.5, color: "#151e28" }}>
+      <div style={{ borderTop: "1px solid #0e1318", padding: "10px 22px", textAlign: "center", fontSize: 15, color: "#151e28" }}>
         Researched via Ticketmaster · Songkick · JamBase · Live Nation · Music Festival Wizard · May 2026 · Edmonton Folk Fest Aug 6–9, 2026
       </div>
     </div>

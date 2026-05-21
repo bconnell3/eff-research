@@ -1,0 +1,208 @@
+/* ─── BASE ──────────────────────────────────────────────────────────────────── */
+.app {
+  font-family: 'Georgia', serif;
+  background: #070809;
+  min-height: 100vh;
+  color: #d8dde4;
+}
+
+/* ─── HEADER ────────────────────────────────────────────────────────────────── */
+.header {
+  background: linear-gradient(160deg, #0d1114 0%, #070809 100%);
+  border-bottom: 1px solid #13181e;
+  padding: 24px 22px 18px;
+}
+
+.header-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #eaeff5;
+  letter-spacing: -0.2px;
+}
+
+.header-subtitle {
+  margin: 4px 0 14px;
+  font-size: 12px;
+  color: #2a3848;
+  font-style: italic;
+}
+
+/* ─── PILLS ─────────────────────────────────────────────────────────────────── */
+.pills {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.pill {
+  font-size: 11.5px;
+  background: #0d1114;
+  border-radius: 4px;
+  padding: 3px 9px;
+  /* border and color set dynamically */
+}
+
+/* ─── FILTERS ───────────────────────────────────────────────────────────────── */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 3px;
+}
+
+.filter-btn {
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  /* background, border, and color set dynamically */
+}
+
+.search-input {
+  background: #0d1114;
+  border: 1px solid #131c28;
+  color: #8898b0;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  width: 120px;
+  font-family: Georgia, serif;
+  outline: none;
+}
+
+/* ─── DISCLAIMER ────────────────────────────────────────────────────────────── */
+.disclaimer {
+  background: #090a0c;
+  border-bottom: 1px solid #0e1318;
+  padding: 6px 22px;
+}
+
+.disclaimer-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: #1a2430;
+}
+
+/* ─── TIERS ─────────────────────────────────────────────────────────────────── */
+.tiers {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 14px 22px 48px;
+}
+
+.tier {
+  margin-bottom: 18px;
+}
+
+.tier-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 8px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tier-label {
+  font-size: 13px;
+  font-weight: 700;
+  /* color set dynamically */
+}
+
+.tier-desc {
+  font-size: 11px;
+  color: #2a3848;
+  font-style: italic;
+}
+
+.tier-count {
+  margin-left: auto;
+  font-size: 11px;
+  color: #2a3848;
+}
+
+.tier-divider {
+  height: 1px;
+  margin-bottom: 7px;
+  /* background set dynamically */
+}
+
+/* ─── ARTIST LIST ───────────────────────────────────────────────────────────── */
+.artists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.artist-card {
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 0 14px;
+  /* background, border, and border-left set dynamically */
+}
+
+.artist-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.artist-star {
+  font-size: 10px;
+  color: #f0c040;
+}
+
+.artist-name {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #dce8f0;
+}
+
+.artist-genre {
+  font-size: 10.5px;
+  color: #2a3848;
+  margin-bottom: 5px;
+}
+
+.artist-dates {
+  font-size: 10.5px;
+  color: #1e3040;
+  line-height: 1.6;
+}
+
+.artist-notes {
+  margin: 0;
+  font-size: 12.5px;
+  color: #5a7080;
+  line-height: 1.55;
+}
+
+/* ─── FOOTER ────────────────────────────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid #0e1318;
+  padding: 10px 22px;
+  text-align: center;
+  font-size: 10.5px;
+  color: #151e28;
+}
