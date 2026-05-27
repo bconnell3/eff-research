@@ -720,7 +720,7 @@ export default function App() {
       {/* Disclaimer */}
       <div style={{ background: "#090a0c", borderBottom: "1px solid #404040", padding: "6px 22px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", fontSize: 15, color: "#8898b0" }}>
-          ⚠ "Likely Available" = no conflicting dates found in public listings. Agents must confirm actual availability.
+          ⚠ "Likely Available" = no conflicting dates found in public listings.
         </div>
       </div>
 
