@@ -532,7 +532,14 @@ const ALL = [
       notes: "Playing Portland ME folk festival Aug 7–9. Direct clash.",
     },
   {
-      name: "Lake Street Dive",
+      name: "Koe Wetzel",
+      genre: "Country / Texas Rock",
+      tier: "conflict",
+      lastBefore: "Jul 8 – Edmonton, AB (Rogers Place – headlining)",
+      firstAfter: "Aug 6 – Bonner Springs, KS → Aug 7 – Evansville, IN",
+      notes: "Double conflict: Jul 8 Rogers Place Edmonton headlining show triggers a 90-day radius clause covering the entire folk fest window. And he's actively touring Aug 6–7 on the Night Champion World Tour. Arena-scale country act — not Edmonton Folk Fest's lane either.",
+    },
+  {
       genre: "Soul / Pop / Jazz",
       tier: "conflict",
       lastBefore: "Aug 5 – Lafayette, NY",
@@ -562,6 +569,14 @@ const ALL = [
       lastBefore: "Jul 31–Aug 2 – Osheaga, Montreal",
       firstAfter: "Sep 19 – CityFolk Festival, Ottawa",
       notes: "Playing Red Rocks Aug 6 — opening day of Edmonton. Also on Calgary Folk Fest Jul 23–26. Packed run right through Edmonton's dates.",
+    },
+  {
+      name: "Riley Green",
+      genre: "Country",
+      tier: "conflict",
+      lastBefore: "Jul 23 – Salt Lake City, UT",
+      firstAfter: "Aug 6 – Darien Center, NY → Aug 7 – Cuyahoga Falls, OH → Aug 8 – Bristow, VA",
+      notes: "Cowboy As It Gets Tour books all three opening days of Edmonton Folk Fest (Aug 6, 7, 8) at US amphitheaters. Hard conflict. Arena-scale commercial country — not Edmonton's programming lane.",
     },
   {
       name: "Sarah McLachlan",
