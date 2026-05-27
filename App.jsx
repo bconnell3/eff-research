@@ -540,6 +540,7 @@ const ALL = [
       notes: "Double conflict: Jul 8 Rogers Place Edmonton headlining show triggers a 90-day radius clause covering the entire folk fest window. And he's actively touring Aug 6–7 on the Night Champion World Tour. Arena-scale country act — not Edmonton Folk Fest's lane either.",
     },
   {
+      name: "Lake Street Dive",
       genre: "Soul / Pop / Jazz",
       tier: "conflict",
       lastBefore: "Aug 5 – Lafayette, NY",
@@ -722,7 +723,7 @@ export default function App() {
           </div>
 
           {/* Filters */}
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             <div style={{ display: "flex", gap: 3 }}>
               {CATS.map(c => (
                 <button key={c} onClick={() => setCat(c)} style={{
@@ -735,8 +736,8 @@ export default function App() {
               ))}
             </div>
             <input value={search} onChange={e => setSearch(e.target.value)}
-              placeholder="Search…"
-              style={{ background: "#0d1114", border: "1px solid #131c28", color: "#8898b0", borderRadius: 4, padding: "4px 10px", fontSize: 15, width: 120, fontFamily: "Georgia, serif", outline: "none" }} />
+              placeholder="Search artists…"
+              style={{ background: "#111c26", border: "1px solid #2a3d52", color: "#8898b0", borderRadius: 4, padding: "14px 12px", fontSize: 15, width: "100%", fontFamily: "Georgia, serif", outline: "none", margin: "10px 0" }} />
           </div>
         </div>
       </div>
